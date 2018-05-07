@@ -5,4 +5,11 @@ Rails.application.routes.draw do
   		resources :comments
     end
     resources :tags
+    resources :users
+
+    resources :usersessions, only: [ :new, :create, :destroy ]
+
+	get 'login'  => 'usersessions#new'
+	get 'logout' => 'usersessions#destroy'
+
 end

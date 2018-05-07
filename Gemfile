@@ -29,11 +29,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', platforms: :ruby
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+#gem 'bcrypt-ruby'
 gem "paperclip"
+gem 'sorcery'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
