@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :zero_users_or_authenticated, only: [:new, :create]
+  before_action :zero_users_or_authenticated, only: [:new, :create]
 
   # GET /users
   # GET /users.json
