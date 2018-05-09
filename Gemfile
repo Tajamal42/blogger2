@@ -53,7 +53,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
-group :development do
+group :production do
 	gem 'pg'
 end
 
