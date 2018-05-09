@@ -1,0 +1,143 @@
+<!-- Footer ================================================== -->
+<div id="footer" class="margin-top-15">
+  <!-- Main -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-6">
+        <img class="footer-logo" src="#" alt="">
+        <br><br>
+        <p>Geo Lahore is for advertising events</p>
+      </div>
+      <div class="col-md-4 col-sm-6 ">
+        <h4>Helpful Links</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fab fa-jedi-order"></i> Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">My Account</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>    
+      <div class="col-md-3  col-sm-12">
+        <h4>Contact Us</h4>
+        <div class="text-widget">
+          <span>Township Lahore</span> <br>
+          Phone: <span>0334-7452064 </span><br>
+          E-Mail:<span> <a href="#"><span class="__cf_email__">tajamal.azan@gmail.com</span></a> </span><br>
+        </div>
+        <ul class="social-icons margin-top-20">
+          <li><a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a></li>
+          <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
+          <li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
+          <li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="copyrights">© 2018 Geo Lahore. All Rights Reserved.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer / End -->
+<!-- Back To Top Button -->
+<div id="backtotop"><a href="#"></a></div>
+</div>
+<!-- Wrapper / End -->
+
+<script>
+    $(document).ready(function() {
+
+      var time = 7; // time in seconds
+
+      var $progressBar,
+          $bar, 
+          $elem, 
+          isPause, 
+          tick,
+          percentTime;
+
+        //Init the carousel
+        $("#owl-demo").owlCarousel({
+          slideSpeed : 500,
+          paginationSpeed : 500,
+          singleItem : true,
+          afterInit : progressBar,
+          afterMove : moved,
+          startDragging : pauseOnDragging
+        });
+
+        //Init progressBar where elem is $("#owl-demo")
+        function progressBar(elem){
+          $elem = elem;
+          //build progress bar elements
+          buildProgressBar();
+          //start counting
+          start();
+        }
+
+        //create div#progressBar and div#bar then prepend to $("#owl-demo")
+        function buildProgressBar(){
+          $progressBar = $("<div>",{
+            id:"progressBar"
+          });
+          $bar = $("<div>",{
+            id:"bar"
+          });
+          $progressBar.append($bar).prependTo($elem);
+        }
+
+        function start() {
+          //reset timer
+          percentTime = 0;
+          isPause = false;
+          //run interval every 0.01 second
+          tick = setInterval(interval, 10);
+        };
+
+        function interval() {
+          if(isPause === false){
+            percentTime += 1 / time;
+            $bar.css({
+               width: percentTime+"%"
+             });
+            //if percentTime is equal or greater than 100
+            if(percentTime >= 100){
+              //slide to next item 
+              $elem.trigger('owl.next')
+            }
+          }
+        }
+
+        //pause while dragging 
+        function pauseOnDragging(){
+          isPause = true;
+        }
+
+        //moved callback
+        function moved(){
+          //clear interval
+          clearTimeout(tick);
+          //start again
+          start();
+        }
+
+        //uncomment this to make pause on mouseover 
+        // $elem.on('mouseover',function(){
+        //   isPause = true;
+        // })
+        // $elem.on('mouseout',function(){
+        //   isPause = false;
+        // })
+    });
+    </script>
+    
+    
+  </body>
+</html>

@@ -33,7 +33,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-#gem 'bcrypt-ruby'
+# gem 'bcrypt-ruby'
+# gem 'bcrypt', platforms: :ruby
+gem "font-awesome-rails"
+gem 'jquery-rails'
 gem "paperclip"
 gem 'sorcery'
 
@@ -48,6 +51,10 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+end
+
+group :development do
+	gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

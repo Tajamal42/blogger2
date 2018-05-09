@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic Page Needs ================================================== -->
+    <title>geolahore.com a blog on news evens and journalism - Event Tracking, government jobs, ppsc, jang news, fpsc, jobs in dubai, jobs in pakistan, pakistan jobs bank, army jobs, jobs in hyderabad, latest job jobs from home, clerk jobs, court jobs, assistant jobs, jobs in fsd, jobs district and sessions courts faisalabad jobs 2018 stenographer jobs assistant librarian jobs data entry operator jobs junior clerk jobs naib qasid jobs moazzam jobs cooks jobs. </title>
+    <meta name="description" content="geo lahore in pakistan showing current events to do near me eventbrite event cinemas party and showing ipl live streaming circus in emporium" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+<div id="wrapper">
+<!-- Header Container ================================================== -->
+<header id="header-container">
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+      <!-- Left Side Content -->
+      <div class="left-side">
+        <!-- Logo -->
+        <div id="logo">
+          <a href="index.html" title = "geolahore"><%= image_tag("logo.png", :alt => "geolahore") %></a>
+        </div>
+        <div class="clearfix"></div>
+        <!-- Main Navigation / End -->
+      </div>
+      <!-- Left Side Content / End -->
+      <!-- Right Side Content / End -->
+      <div class="right-side">
+        <!-- Mobile Navigation -->
+        <div class="mmenu-trigger">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation">
+                  <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+                </button>
+        </div>
+        <!-- Main Navigation -->
+        <nav id="navigation" class="style-1 navbar-collapse collapse">
+          <ul>
+            <li><a class="current" title = "geo lahore" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li>
+               <% if logged_in? %>
+                <%= "Logged in as #{current_user.email}" %>
+                  <%= link_to "logout", logout_path %>
+                <% else %>
+                <%= link_to "login", login_path %>
+                <% end %>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+      <!-- Right Side Content / End -->
+    </div>
+  </div>
+  <!-- Header / End -->
+<div class="container-fluid">
+<div class="carousel fade-carousel carousel-fade slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero container">
+        <hgroup>
+            <h1>Welcome to<br /> GeoLahore.com</h1> 
+            <h3>A blog on news, events<br /> and journalism.</h3>
+        </hgroup>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero container">        
+        <hgroup>
+            <h1>Welcome to<br /> GeoLahore.com</h1> 
+            <h3>A blog on news, events<br /> and journalism.</h3>
+        </hgroup>       
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero container">        
+        <hgroup>
+            <h1>Welcome to<br /> GeoLahore.com</h1> 
+            <h3>A blog on news, events<br /> and journalism.</h3>
+        </hgroup>
+      </div>
+    </div>
+  </div> 
+</div>
+</div>
+<div class="clearfix"></div>
+</header>
