@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :zero_users_or_authenticated, only: [:new, :create]
+  #before_action :zero_users_or_authenticated, only: [:new, :create]
 
   # GET /users
   # GET /users.json
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
   end
 
   def zero_users_or_authenticated
-      unless Author.count == 0 || current_user
+      unless User.count == 0 || current_user
         redirect_to root_path
         return false
       end
